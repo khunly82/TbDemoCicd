@@ -19,4 +19,17 @@ jobs:
             - name: step 3
               # afficher les fichier
               run: ls -a -l
+            - name: step 4
+              # installer .net
+              uses: actions/setup-dotnet@v5
+              with:
+                  dotnet-version: '8.0.x'
+            - name: step 5
+              run: dotnet restore
+            - name: step 6
+              run: dotnet build
+            - name: step 7
+              run: dotnet deploy -o publish
+            - name: step 8
+              run: ls -a -l publish
         
