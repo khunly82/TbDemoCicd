@@ -14,5 +14,9 @@ jobs:
             - name: step 1
               run: echo "Hello world!!"
             - name: step 2
+              # prendre le code sur git
+              uses: actions/checkout@v6
+            - name: step 3
+              # afficher les fichier
               run: ls -a -l
         
