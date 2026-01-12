@@ -27,9 +27,7 @@ jobs:
             - name: step 5
               run: dotnet restore
             - name: step 6
-              run: dotnet build
+              run: dotnet build -o publish
             - name: step 7
-              run: dotnet deploy -o publish
-            - name: step 8
               run: ls -a -l publish
         
