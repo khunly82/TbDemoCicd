@@ -29,5 +29,11 @@ namespace DemoCicd.Controllers
             })
             .ToArray();
         }
+
+        [HttpGet("Hello")]
+        public IActionResult GetHello()
+        {
+            return Ok(new { Value = 42 });
+        }
     }
 }
