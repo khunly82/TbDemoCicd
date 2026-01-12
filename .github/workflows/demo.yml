@@ -1,16 +1,18 @@
 ﻿#nom du pipeline
 name: mon premier pipeline
-
 on: 
     push:
         branches: [master]
-
+    # ajouter un bouton pour déclencher le pipeline manuellement    
+    workflow_dispatch:
 jobs:
     # nom de votre premier job
     job1: 
         # sur quel type de machine votre job va s'exécuter
         runs-on: ubuntu-latest
         steps:
-            - name: step1
+            - name: step 1
               run: echo "Hello world!!"
+            - name: step 2
+              run: ls -a -l
         
