@@ -32,4 +32,10 @@ jobs:
               run: dotnet publish -o ./publish
             - name: step 8
               run: ls -la
+            - name: step 9
+              uses: azure/webapps-deploy@v2
+              with:
+                app-name: tbdemicicd2025
+                package: ./publish
+                publish-profile: ${{ secrets.AZURE_SECRETS }}
         
